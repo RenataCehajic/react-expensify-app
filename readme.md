@@ -1,3 +1,6 @@
+Track your expenses with this app - it's awsome! Login with your Google account and check it out. 
+Link: https://rect-expensify.herokuapp.com/
+
 # Git Commands
 
 git init - Create a new git repo 
