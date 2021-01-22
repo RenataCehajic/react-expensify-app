@@ -1,8 +1,7 @@
 const path = require('path'); 
 const webpack = require('webpack'); 
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); 
-const loader = require('sass-loader');
-const WebpackDevServer = require('webpack-dev-server');
+
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -16,7 +15,7 @@ module.exports = (env) => {
     const isProduction = env === 'production'; 
     const CSSExtract = new ExtractTextPlugin('styles.css'); 
     return {
-        entry:'./src/app.js',
+        entry: ['babel-polyfill', './src/app.js'],
         output: {
             path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
